@@ -41,7 +41,7 @@ Session(app)
 
 # def hello():
 #     return "Hello world"
-db = SQL("sqlite:///C:\wamp64\www\phpLiteAdmin\weight.db")
+db = SQL("sqlite:///weight.db")
 # path = "C:\wamp64\www\phpLiteAdmin\weight.db"
 # db = sqlite3.connect(path, check_same_thread=False)
 @app.route("/")
