@@ -1,0 +1,80 @@
+
+{% extends "index.html" %}
+
+{% block title %}
+   Calculator
+{% endblock %}
+
+{% block main %}
+<body>
+    
+    
+<div>
+    <h3 style="text-align: center;">Calculate your BMI</h3>
+    <br>
+    {% if not session.user_id %}
+    <h6 style="text-align: center;">If you want to track your weight. Sign up and login to your account</h6>
+</div>
+    {% endif %}
+    <form action="/calculate" method="post">
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="weight" placeholder="Weight (KG)" type="number">
+        </div>
+        <div class="form-group">
+            <input class="form-control" name="height" placeholder="Height (CM)" type="number">
+        </div>
+        <div class="text-center">
+        <button id="button" class="btn btn-outline-primary" btn-lg" type="submit">Calculate!</button>
+    </div>
+    </form>
+    <br> 
+    <hr>
+    {% if bandera %}
+    <div id="resultDiv" >
+        <h3 id="resultText">
+            Your BMI is {{imc|round(2)}}
+        </h3>
+        
+    </div>
+    <br>
+    <hr>
+    <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th style="width: 50%" scope="col">BMI</th>
+            <th style="width: 50%" scope="col">Nutritional status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Below 18.5</th>
+            <td>UnderWeight</td>
+         
+          </tr>
+          <tr>
+            <th scope="row">18.5-24.9</th>
+            <td>Normal Weight</td>
+         
+          </tr>
+          <tr>
+            <th scope="row">25.0-29.9</th>
+            <td>Pre-obesity</td>
+      
+          </tr>
+          <tr>
+            <th scope="row">30.0-34.9</th>
+            <td>Obesity class I</td>
+      
+          </tr>
+          <tr>
+            <th scope="row">35.0-39.9</th>
+            <td>Obesity class II</td>
+      
+          </tr>
+        </tbody>
+      </table>
+      
+    
+    {% endif %}
+</body>
+{% endblock %}

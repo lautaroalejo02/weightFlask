@@ -1,0 +1,32 @@
+#resultDiv{
+    border: 1px solid #f56a79;
+    border-radius: 40px;
+    width: 230px;
+    text-align: center;
+    margin: auto;
+   
+}
+#resultText{
+    padding: 8px;
+  
+}
+.navbar-toggler {
+    background-color: #f56a79;
+    
+  }
+  .navbar-light .navbar-toggler-icon {
+   background-image: url("/static/toggler.png") !important;
+  }
+#button{
+    margin: auto;
+    text-align: center;
+    width: 60%;
+    height: 20%;
+    background-color: #f56a79;
+    color: white;
+    font-weight: bolder;
+    border-color: white;
+}
+body{
+    font-family:'Montserrat';
+}

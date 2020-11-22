@@ -1,0 +1,36 @@
+
+{% extends "index.html" %}
+
+{% block title %}
+   Register
+{% endblock %}
+
+{% block main %}
+    <form action="/register" method="post">
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" name="username" placeholder="Username" type="text">
+        </div>
+        <div class="form-group">
+            <input class="form-control" name="password" placeholder="Password" type="password">
+        </div>
+        <div class="form-group">
+            <input class="form-control" name="name" placeholder="Name" type="text">
+        </div>
+        <div class="form-group" id="hola">
+            <input class="form-control" name="lastname" placeholder="Last Name" type="text">
+        </div>
+        <div class="form-group">
+            <select  onclick="locura(this)" name="gender" id="genders" style="width:100%;">
+                <option value="M">Male</option>
+                <option value="F">Female</option>
+                <option  value="O" id="others">Others (specify)</option>
+                <input  class="form-control" placeholder="Specify" type="text" style="visibility: hidden;" name="specify" id="speci">
+              </select>
+        </div>
+        <div class="text-center">
+            <button id="button" class="btn btn-primary" onclick="register()" type="submit">Register</button>
+        </div>
+        
+    </form>
+   
+{% endblock %}

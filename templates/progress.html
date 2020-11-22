@@ -1,0 +1,32 @@
+
+{% extends "index.html" %}
+
+{% block title %}
+   Register
+{% endblock %}
+
+{% block main %}
+<table class="table table-stripped">
+
+    <thead>
+        <th>Date</th>
+        <th>Weight</th>
+        <th>Height</th>
+        <th>BMI</th>
+     </thead>
+     <tfoot>
+         </tfoot>
+         <tbody>
+             {% for weightRecord in history %}
+             <tr>
+             <td>{{weightRecord["weight_Date"]}}</td>
+             <td>{{weightRecord["weight_Weight"]}}</td>
+             <td>{{weightRecord["weight_Height"]}}</td>
+             <td>{{weightRecord["weight_Imc"]|round(2)}}</td>
+             </tr>
+             {% endfor %}
+             <tr>
+
+         </tbody>
+</table>
+{% endblock %}
