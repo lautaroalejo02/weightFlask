@@ -4,5 +4,3 @@ requests==2.24.0
 cs50==5.1.0
 Flask==1.1.2
 Werkzeug==1.0.1
-pyOpenSSL==19.1.0
-secrets==1.0.2
